@@ -154,6 +154,7 @@ reference:
   - ansi_nzchar
   - ansi_regex
   - ansi_simplify
+  - ansi_string
   - ansi_strip
   - ansi_strsplit
   - ansi_strtrim
@@ -213,6 +214,7 @@ reference:
   - hash_animal
   - hash_emoji
   - hash_md5
+  - hash_sha1
   - hash_sha256
 
 - title: Utilities and Configuration
@@ -232,8 +234,10 @@ reference:
   - default_app
   - diff_chr
   - diff_str
+  - has_keypress_support
   - is_dynamic_tty
   - is_utf8_output
+  - keypress
   - ruler
   - start_app
   - stop_app

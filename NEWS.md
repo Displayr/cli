@@ -1,5 +1,40 @@
 # cli (development version)
 
+* `ansi_collapse(x, trunc = 1, style = "head")` now indeed show one element
+  if `length(x) == 2`, as documented (@salim-b, #572).
+
+* `ansi_collapse()` gains a `sep2` argument to specify a seperate separator
+  for length-two inputs. It defaults to `" and "` which, in conjunction with
+  the other defaults, produces a collapsed string that fully adheres to the
+  [serial comma](https://en.wikipedia.org/wiki/Serial_comma) rules.
+  (@salim-b, #569)
+
+* `ansi_string()` is now an exported function (@multimeric, #573).
+
+# cli 3.6.1
+
+* ANSI hyperlinks are now turned off on the RStudio render plane (#581).
+
+# cli 3.6.0
+
+* The progressr progress handler now reports progress correctly
+  (@HenrikBengtsson, #558).
+
+* New `hash_*sha1()` functions to calculate the SHA-1 hash of strings,
+  objects, files.
+
+* cli now shows progress bars after one second by default, if they
+  are less than half way at the point. (Or after two seconds,
+  unconditionally, as before.) See the the `cli.progress_show_after`
+  option in `?cli-config` for details (#542).
+
+* `format_inline()` now has a new argument `keep_whitespace`, and it keeps
+  whitespace, including newline and form feed characters by default.
+
+# cli 3.5.0
+
+* New `keypress()` function to read a single key press from a terminal.
+
 * New function `pretty_print_code()` to print function objects with syntax
   highlighting at the R console.
 
@@ -10,6 +45,9 @@
 
 * `ansi_strtrim()` now handles some edge cases better, when `ellipsis` has
   length zero, and when it is wider than `width`.
+
+* New `hash_file_md5()` function to calculate the MD5 hash of one or more
+  files.
 
 # cli 3.4.1
 
